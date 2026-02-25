@@ -4,7 +4,7 @@ export { z };
 const DmPolicySchema = z.enum(["open", "pairing", "allowlist"]);
 const GroupPolicySchema = z.enum(["open", "allowlist", "disabled"]);
 const FeishuDomainSchema = z.union([
-  z.enum(["feishu", "lark"]),
+  z.enum(["feishu", "lark", "larksuite"]),
   z.string().url().startsWith("https://"),
 ]);
 const FeishuConnectionModeSchema = z.enum(["websocket", "webhook"]);

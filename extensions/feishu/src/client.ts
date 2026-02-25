@@ -11,7 +11,7 @@ const clientCache = new Map<
 >();
 
 function resolveDomain(domain: FeishuDomain | undefined): Lark.Domain | string {
-  if (domain === "lark") {
+  if (domain === "lark" || domain === "larksuite") {
     return Lark.Domain.Lark;
   }
   if (domain === "feishu" || !domain) {
